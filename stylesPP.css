@@ -1,0 +1,148 @@
+
+/* Header */
+.barra-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.logo-img {
+  max-width: 80px !important; 
+  height: auto;
+}
+
+.titulo-sitio {
+  margin: 0;
+  font-size: 18px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Buscador */
+.buscador {
+  margin-top: 10px;
+}
+
+.caja-buscar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ddd;
+  border-radius: 999px;
+  padding: 8px 14px;
+  width: 100%;
+}
+
+.caja-buscar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Grid de productos */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-2px);
+}
+
+.imagen-tarjeta {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tarjeta-cuerpo {
+  padding: 12px;
+}
+
+.tarjeta-titulo {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tarjeta-precio {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Categorías */
+.categorias {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin: 15px 0;
+}
+
+.etiqueta {
+  background: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s;
+}
+
+.etiqueta:hover {
+  background: #d35400;
+}
+
+.nav-principal {
+  margin-left: auto; 
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-link {
+  background: #e67e22;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  background: #d35400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .logo-img {
+    max-width: 60px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
